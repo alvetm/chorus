@@ -10,6 +10,7 @@
   },
   "dependencies": {
     "@ai-sdk/azure": "^3.0.54",
+    "@azure/identity": "^4.13.1",
     "@base-ui/react": "^1.4.1",
     "@ducanh2912/next-pwa": "^10.2.9",
     "ai": "^6.0.168",

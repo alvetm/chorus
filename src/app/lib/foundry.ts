@@ -1,7 +1,11 @@
 import { createAzure } from '@ai-sdk/azure';
 
 export function getAzureProvider(accountName: string, apiKey: string) {
-  return createAzure({ resourceName: accountName, apiKey });
+  return createAzure({
+    resourceName: accountName,
+    apiKey,
+    baseURL: `https://${accountName}.cognitiveservices.azure.com/openai`,
+  });
 }
 
 export function getConfiguredProviders() {
@@ -22,5 +26,5 @@ export function getConfiguredProviders() {
 }
 
 export function getEndpointUrl(accountName: string) {
-  return `https://${accountName}.openai.azure.com`;
+  return `https://${accountName}.cognitiveservices.azure.com`;
 }
